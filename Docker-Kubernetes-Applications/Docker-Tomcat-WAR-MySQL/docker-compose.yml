@@ -1,0 +1,15 @@
+version: '3'
+services:
+  web:
+    image: pbadhe34/apps:spring-rest-mysql
+    ports:
+     - "8090:8090"
+  mysql-server:
+   image: mysql:8.0.24
+   environment:
+      - "name": "MYSQL_ROOT_PASSWORD"
+        "value": "MyRootPass123"
+      - name: MYSQL_DATABASE
+        value: mydb
+   volumes:
+        - /c/data/mysqldata:/var/lib/mysql/data

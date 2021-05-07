@@ -1,0 +1,14 @@
+###FROM ubuntu:18.04
+
+FROM openjdk:8-jre-alpine
+ 
+# Setup JAVA_HOME -- useful for docker commandline
+ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
+RUN export JAVA_HOME
+
+RUN export PATH=$JAVA_HOME/bin:$PATH
+
+EXPOSE 8090
+COPY  springboot-app.jar app.jar
+##CMD  ["/usr/bin/java", "-jar", "app.jar"]
+CMD  ["java", "-jar", "app.jar"]

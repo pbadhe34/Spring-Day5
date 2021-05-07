@@ -1,0 +1,8 @@
+
+
+GET-->http://localhost:8090/JPA-REST-App/api/get/{id}
+GET-->ttp://localhost:8090/JPA-REST-App/api/list
+GET-->http://localhost:8090/JPA-REST-App/api/test
+POST-->http://localhost:8090/JPA-REST-App/api/add
+PUT-->http://localhost:8090/JPA-REST-App/api/update/{id}
+DELETE-->http://localhost:8090/JPA-REST-App/api/remove/{id}
