@@ -7,9 +7,9 @@ services:
   mysql-server:
    image: mysql:8.0.24
    environment:
-      - "name": "MYSQL_ROOT_PASSWORD"
-        "value": "MyRootPass123"
-      - name: MYSQL_DATABASE
-        value: mydb
+      MYSQL_ROOT_PASSWORD: "MyRootPass123"
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: app-user
+      MYSQL_PASSWORD: "MyRootPass123"
    volumes:
-        - /c/data/mysqldata:/var/lib/mysql/data
+        - /c/mysqldata:/var/lib/mysql/data
